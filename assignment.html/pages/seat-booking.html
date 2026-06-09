@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seat Booking • APU Neon Weekend</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/events.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">APU Neon Weekend</a>
+      <nav class="main-nav">
+        <a href="events.html">Events</a>
+        <a href="afterhours.html">AfterHours</a>
+        <a href="midnightpulse.html">Midnight Pulse</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <a class="auth-link" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="page-title">Seat Booking</h1>
+      <section class="detail-panel">
+        <p>Select a seat below and confirm your booking for the concert.</p>
+      </section>
+      <section class="detail-panel">
+        <div id="seatGrid" class="event-grid"></div>
+        <div id="seatSummary" class="detail-panel" style="margin-top:18px;">Loading seat summary...</div>
+        <form id="bookingForm">
+          <button class="btn btn-primary" type="submit">Confirm Booking</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/seats.js"></script>
+</body>
+</html>

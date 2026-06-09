@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard • APU Neon Weekend</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <div id="dashboardPage" class="dashboard-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">APU Neon Weekend</a>
+      <nav class="main-nav">
+        <a href="events.html">Events</a>
+        <a href="afterhours.html">AfterHours</a>
+        <a href="midnightpulse.html">Midnight Pulse</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <button id="logoutBtn" class="action-btn">Logout</button>
+      </div>
+    </header>
+
+    <section class="dashboard-panel">
+      <h1 id="welcomeBanner">Welcome back</h1>
+      <p>Personalized event portal with booking, saved events, and schedule updates.</p>
+    </section>
+
+    <div class="dashboard-grid">
+      <section class="dashboard-panel">
+        <h2>My Ticket</h2>
+        <div id="ticketInfo"></div>
+      </section>
+      <section class="dashboard-panel">
+        <h2>Saved Events</h2>
+        <div id="savedEvents"></div>
+      </section>
+      <section class="dashboard-panel">
+        <h2>Upcoming: Friday</h2>
+        <div id="upcomingEvent">No upcoming event selected yet.</div>
+      </section>
+      <section class="dashboard-panel">
+        <h2>Event Announcements</h2>
+        <ul id="eventAnnouncements"></ul>
+      </section>
+      <section class="dashboard-panel">
+        <h2>User Profile</h2>
+        <div class="profile-row">
+          <div class="profile-data"><strong>Name</strong><span id="userName"></span></div>
+          <div class="profile-data"><strong>Email</strong><span id="userEmail"></span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/events.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

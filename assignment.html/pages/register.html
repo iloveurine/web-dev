@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register • APU Neon Weekend</title>
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div class="auth-shell">
+    <section class="auth-panel">
+      <h1>Create Participant Profile</h1>
+      <p>Sign up to manage your bookings, saved events, and concert schedule.</p>
+      <form id="registerForm">
+        <label>Full Name
+          <input id="fullName" type="text" required>
+        </label>
+        <label>Email Address
+          <input id="email" type="email" required>
+        </label>
+        <label>Password
+          <div class="password-row">
+            <input id="password" type="password" required>
+            <button type="button" id="togglePassword">Show</button>
+          </div>
+        </label>
+        <label>Confirm Password
+          <div class="password-row">
+            <input id="confirmPassword" type="password" required>
+            <button type="button" id="toggleConfirmPassword">Show</button>
+          </div>
+        </label>
+        <div id="authFeedback" class="auth-feedback"></div>
+        <button type="submit">Create Account</button>
+      </form>
+      <p class="auth-footer">Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+  </div>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
