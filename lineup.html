@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Lineup • APU Neon Weekend</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lineup.css">
+</head>
+<body>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">APU Neon Weekend</a>
+      <nav class="main-nav">
+        <a href="experience.html">Festival Experience</a>
+        <a href="lineup.html" class="active">Artist Lineup</a>
+        <a href="events.html">Festival Events</a>
+        <a href="activities.html">Activities</a>
+        <a href="highlights.html">Festival Highlights</a>
+      </nav>
+    </header>
+  </div>
+
+  
+  <div class="page-shell">
+    <<section class="hero">
+  <img src="images/hero image festival.avif"
+       alt="Artist Lineup"
+       class="hero-bg"
+       style="width:100%; height:460px; object-fit:cover; display:block;">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">APU Neon Weekend — November 2026</p>
+        <h1 class="hero-title"><span>Artist</span><br>Lineup</h1>
+        <p class="hero-sub">World-class performers. Three nights. One campus.</p>
+        <a href="events.html" class="btn btn-primary">View Events</a>
+      </div>
+    </section>
+  </div>
+
+ 
+  <div class="page-shell">
+    <div class="section-header fade-in">
+      <h2 class="section-title">Headliners</h2>
+      <p>The biggest names closing out each night on the Neon Arena stage.</p>
+    </div>
+
+    <div class="headliner-row fade-in">
+
+      <div class="headliner-card">
+        <div class="headliner-img-wrap">
+          <img src="images/nova eclipse.jpg"
+               alt="Nova Eclipse"
+               style="width:100%; height:300px; object-fit:cover; display:block;">
+          <div class="headliner-badge">FRIDAY HEADLINER</div>
+        </div>
+        <div class="headliner-info">
+          <p class="artist-genre">Electronic / Synth-Pop</p>
+          <h3>Nova Eclipse</h3>
+          <p>Chart-topping electronic producer known for explosive live shows and immersive light rigs. Nova Eclipse has headlined festivals across the region and brings an unforgettable closing set to Night One.</p>
+          <div class="artist-meta">
+            <span>&#9654; Friday · 22:00</span>
+            <span>&#9654; Neon Arena</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="headliner-card headliner-card--reverse">
+        <div class="headliner-img-wrap">
+          <img src="images/the redline.jpg"
+               alt="The Redline"
+               style="width:100%; height:300px; object-fit:cover; display:block;">
+          <div class="headliner-badge">SATURDAY HEADLINER</div>
+        </div>
+        <div class="headliner-info">
+          <p class="artist-genre">Indie Rock / Alt</p>
+          <h3>The Redline</h3>
+          <p>Raw energy, anthemic riffs, and a fanbase that never stops moving. The Redline burst onto the scene in 2023 and have been selling out venues ever since. Night Two belongs to them.</p>
+          <div class="artist-meta">
+            <span>&#9654; Saturday · 22:00</span>
+            <span>&#9654; Neon Arena</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="headliner-card">
+        <div class="headliner-img-wrap">
+          <img src="images/solara.webp"
+               alt="SOLARA"
+               style="width:100%; height:300px; object-fit:cover; display:block;">
+          <div class="headliner-badge">SUNDAY HEADLINER</div>
+        </div>
+        <div class="headliner-info">
+          <p class="artist-genre">R&amp;B / Neo-Soul</p>
+          <h3>SOLARA</h3>
+          <p>SOLARA's voice has been called once-in-a-generation. A live experience built on raw emotion, lush production, and moments that stay with you long after the final note. The perfect close to APU Neon Weekend.</p>
+          <div class="artist-meta">
+            <span>&#9654; Sunday · 21:30</span>
+            <span>&#9654; Neon Arena</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Full Lineup — timetable layout -->
+    <div class="section-header fade-in">
+      <h2 class="section-title">Full Lineup</h2>
+      <p>All performing artists across all three stages.</p>
+    </div>
+
+    <div class="day-tabs fade-in">
+      <button class="day-tab active" onclick="switchDay('friday', this)">Friday</button>
+      <button class="day-tab" onclick="switchDay('saturday', this)">Saturday</button>
+      <button class="day-tab" onclick="switchDay('sunday', this)">Sunday</button>
+    </div>
+
+    <!-- Friday Schedule -->
+    <div class="artist-grid" id="day-friday">
+      <div class="schedule-table-wrap">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Artist</th>
+              <th>Time</th>
+              <th>Stage</th>
+              <th>Genre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="schedule-row--headliner">
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Nova Eclipse</span>
+                <span class="schedule-badge">Headliner</span>
+              </td>
+              <td class="schedule-time">22:00</td>
+              <td class="schedule-stage">Neon Arena</td>
+              <td><span class="schedule-genre">Electronic</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Frequency</span>
+              </td>
+              <td class="schedule-time">20:30</td>
+              <td class="schedule-stage">Echo Booth</td>
+              <td><span class="schedule-genre">House</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Static Ground</span>
+              </td>
+              <td class="schedule-time">19:30</td>
+              <td class="schedule-stage">Pulse Deck</td>
+              <td><span class="schedule-genre">Rock</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Dusk Theory</span>
+              </td>
+              <td class="schedule-time">18:00</td>
+              <td class="schedule-stage">Echo Booth</td>
+              <td><span class="schedule-genre">Pop</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Saturday Schedule -->
+    <div class="artist-grid hidden" id="day-saturday">
+      <div class="schedule-table-wrap">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Artist</th>
+              <th>Time</th>
+              <th>Stage</th>
+              <th>Genre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="schedule-row--headliner">
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">The Redline</span>
+                <span class="schedule-badge">Headliner</span>
+              </td>
+              <td class="schedule-time">22:00</td>
+              <td class="schedule-stage">Neon Arena</td>
+              <td><span class="schedule-genre">Indie Rock</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Midnight Haze</span>
+              </td>
+              <td class="schedule-time">20:00</td>
+              <td class="schedule-stage">Pulse Deck</td>
+              <td><span class="schedule-genre">Ambient</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Pulse Runners</span>
+              </td>
+              <td class="schedule-time">18:30</td>
+              <td class="schedule-stage">Pulse Deck</td>
+              <td><span class="schedule-genre">Electronic</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Iron Bloom</span>
+              </td>
+              <td class="schedule-time">17:30</td>
+              <td class="schedule-stage">Echo Booth</td>
+              <td><span class="schedule-genre">Alt</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sunday Schedule -->
+    <div class="artist-grid hidden" id="day-sunday">
+      <div class="schedule-table-wrap">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Artist</th>
+              <th>Time</th>
+              <th>Stage</th>
+              <th>Genre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="schedule-row--headliner">
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">SOLARA</span>
+                <span class="schedule-badge">Headliner</span>
+              </td>
+              <td class="schedule-time">21:30</td>
+              <td class="schedule-stage">Neon Arena</td>
+              <td><span class="schedule-genre">R&amp;B</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Neon Ritual</span>
+              </td>
+              <td class="schedule-time">20:00</td>
+              <td class="schedule-stage">Echo Booth</td>
+              <td><span class="schedule-genre">Synthwave</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Golden Coast</span>
+              </td>
+              <td class="schedule-time">19:00</td>
+              <td class="schedule-stage">Pulse Deck</td>
+              <td><span class="schedule-genre">Pop</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-artist">
+                <span class="schedule-artist-name">Hollow Bones</span>
+              </td>
+              <td class="schedule-time">16:00</td>
+              <td class="schedule-stage">Echo Booth</td>
+              <td><span class="schedule-genre">Folk</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-shell">
+    <footer class="site-footer">
+      <p>&copy; 2026 <span>APU Neon Weekend</span> — All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/lineup.js"></script>
+</body>
+</html>

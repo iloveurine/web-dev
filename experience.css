@@ -1,0 +1,276 @@
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.exp-hero {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 28px 0 60px;
+}
+
+.exp-hero-img {
+  width: 100%;
+  display: block;
+}
+
+.exp-hero-img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.exp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.exp-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 48px 40px;
+}
+
+.stage-concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-bottom: 60px;
+}
+
+.stage-concept-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stage-concept-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(255,49,49,0.15);
+}
+
+.stage-concept-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.stage-concept-body {
+  padding: 18px 20px 22px;
+}
+
+.stage-concept-body h3 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin: 8px 0 8px;
+}
+
+.stage-concept-body p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.atmosphere-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 16px;
+  margin-bottom: 60px;
+  min-height: 480px;
+}
+
+.atm-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.atm-item--tall {
+  height: 100%;
+}
+
+.atm-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.atm-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  gap: 16px;
+}
+
+.atm-right .atm-item img {
+  height: 180px;
+}
+
+.atm-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: 12px 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.atm-item:hover .atm-overlay {
+  opacity: 1;
+}
+
+.atm-overlay span {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.atm-text-panel {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.atm-text-panel h3 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.atm-text-panel p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.lighting-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.lighting-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: center;
+  background: var(--surface);
+  transition: transform 0.3s ease;
+}
+
+.lighting-card:hover {
+  transform: translateY(-4px);
+}
+
+.lighting-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.lighting-card p {
+  padding: 10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.exp-video-wrap {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.exp-video-wrap video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radius);
+  background: #000;
+  display: block;
+}
+
+.exp-audio-wrap {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+}
+
+.exp-audio-wrap audio {
+  width: 100%;
+  max-width: 600px;
+}
+
+.exp-audio-wrap p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .exp-hero-content {
+    padding: 28px 20px;
+  }
+
+  .exp-hero-img img {
+    height: 340px;
+  }
+
+  .atmosphere-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atm-item--tall {
+    height: 260px;
+  }
+
+  .atm-right .atm-item img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lighting-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exp-hero-img img {
+    height: 260px;
+  }
+}
+

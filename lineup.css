@@ -1,0 +1,264 @@
+/* ── Lineup page styles ── */
+
+/* Hero — works with img-placeholder as hero-bg */
+.hero { position: relative; border-radius: var(--radius); overflow: hidden; margin: 28px 0 60px; min-height: 460px; display: flex; align-items: flex-end; }
+.hero .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
+.hero .img-placeholder.hero-bg { position: absolute; inset: 0; border-radius: var(--radius); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.88) 40%, transparent 100%); }
+.hero-content { position: relative; z-index: 2; padding: 48px 40px; }
+
+/* Headliner cards */
+.headliner-row { display: flex; flex-direction: column; gap: 24px; margin-bottom: 20px; }
+
+.headliner-card {
+  display: flex;
+  gap: 28px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.headliner-card:hover { box-shadow: 0 12px 40px rgba(255,49,49,0.15); }
+.headliner-card--reverse { flex-direction: row-reverse; }
+
+.headliner-img-wrap {
+  position: relative;
+  flex: 0 0 340px;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.headliner-img-wrap img,
+.headliner-img-wrap .img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.headliner-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.headliner-info {
+  flex: 1;
+  padding: 28px 28px 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headliner-card--reverse .headliner-info { padding: 28px 0 28px 28px; }
+
+.headliner-info h3 { font-size: 2rem; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+
+.artist-genre {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.headliner-info p { color: var(--muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 18px; }
+
+.artist-meta { display: flex; gap: 18px; flex-wrap: wrap; }
+.artist-meta span { color: var(--muted); font-size: 0.85rem; }
+
+/* Day tabs */
+.day-tabs { display: flex; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+
+.day-tab {
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 2px solid #333;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.day-tab:hover, .day-tab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* ── Schedule / Timetable layout ── */
+
+/* artist-grid is reused as the tab panel container */
+.artist-grid {
+  margin-bottom: 40px;
+  animation: fadeSlide 0.4s ease;
+}
+
+@keyframes fadeSlide { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.artist-grid.hidden { display: none; }
+
+/* Scrollable wrapper for narrow screens */
+.schedule-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+  border: 1px solid #2a2a2a;
+}
+
+/* Table base */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 520px; /* prevents collapse on very small screens */
+}
+
+/* Header row */
+.schedule-table thead tr {
+  background: #1a1a1a;
+  border-bottom: 2px solid var(--primary);
+}
+
+.schedule-table thead th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Body rows */
+.schedule-table tbody tr {
+  border-bottom: 1px solid #222;
+  transition: background 0.2s ease;
+}
+
+.schedule-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(255, 49, 49, 0.05);
+}
+
+/* Headliner row highlight */
+.schedule-row--headliner {
+  background: rgba(255, 49, 49, 0.06);
+}
+
+.schedule-row--headliner:hover {
+  background: rgba(255, 49, 49, 0.11) !important;
+}
+
+/* Cell base */
+.schedule-table tbody td {
+  padding: 16px 20px;
+  vertical-align: middle;
+  color: var(--text);
+}
+
+/* Artist column */
+.schedule-artist {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.schedule-artist-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.schedule-row--headliner .schedule-artist-name {
+  color: #fff;
+}
+
+/* Headliner badge pill */
+.schedule-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Time column */
+.schedule-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+/* Stage column */
+.schedule-stage {
+  color: var(--muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Genre pill */
+.schedule-genre {
+  display: inline-block;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  /* Headliner cards */
+  .headliner-card, .headliner-card--reverse { flex-direction: column; }
+  .headliner-img-wrap { flex: 0 0 220px; height: 220px; }
+  .headliner-info, .headliner-card--reverse .headliner-info { padding: 20px; }
+
+  /* Schedule: tighten cell padding on mobile */
+  .schedule-table thead th,
+  .schedule-table tbody td {
+    padding: 12px 14px;
+  }
+
+  .schedule-artist-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-table thead th,
+  .schedule-table tbody td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .schedule-artist {
+    gap: 8px;
+  }
+}
