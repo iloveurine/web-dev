@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback • APU Neon Weekend</title>
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/feedback.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="page-shell">
+            <header class="site-header">
+                <a class="brand" href="../index.html">APU Neon Weekend</a>
+                <nav class="main-nav">
+                    <a href="events.html">Events</a>
+                    <a href="afterhours.html">AfterHours</a>
+                    <a href="midnightpulse.html">Midnight Pulse</a>
+                    <a href="schedule.html">Schedule</a>
+                    <a href="dashboard.html">Dashboard</a>
+                </nav>
+        <div class="header-actions">
+            <a class="auth-link" href="login.html">Login</a>
+        </div>
+    </header>
+
+    <h1>Customer Feedback</h1>
+    <form id="feedbackForm">
+        <label for="service">Which service are you reviewing?</label>
+        <select id="service">
+            <option>Website</option>
+            <option>Customer Support</option>
+            <option>Event Satisfaction</option>
+            <option>Product Quality</option>
+        </select>
+
+        <label>Rate Your Experience</label>
+        <div id="rating">
+            <input type="radio" name="rating" id="rate" value="1"> 1
+            <input type="radio" name="rating" id="rate" value="2"> 2
+            <input type="radio" name="rating" id="rate" value="3"> 3
+            <input type="radio" name="rating" id="rate" value="4"> 4
+            <input type="radio" name="rating" id="rate" value="5"> 5
+        </div>
+
+        <label for="comment">Comments</label>
+        <textarea id="comment" rows="5" placeholder="Share your feedback..."></textarea>
+
+        <button type="submit" class="btn">Submit Feedback</button>
+    </form>
+    <p id="alert"></p>
+    <script src="../js/feedback.js"></script>
+    </body>
+</html>
