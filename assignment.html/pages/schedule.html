@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule • APU Neon Weekend</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/events.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html">APU Neon Weekend</a>
+      <nav class="main-nav">
+        <a href="events.html">Events</a>
+        <a href="afterhours.html">AfterHours</a>
+        <a href="midnightpulse.html">Midnight Pulse</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <a class="auth-link" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="page-title">Event Schedule</h1>
+      <p id="todayHighlight" class="highlight-text">Loading today's highlighted event...</p>
+      <div class="filter-row">
+        <select id="dayFilter">
+          <option>All</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+        </select>
+      </div>
+      <div class="detail-panel">
+        <table id="scheduleTable" class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Event</th>
+              <th>Venue</th>
+              <th>Stage</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="scheduleList" class="event-grid"></div>
+    </main>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/schedule.js"></script>
+</body>
+</html>
